@@ -1,0 +1,18 @@
+<!-- <ul class="list-group">
+	<li class="list-group-item" *ngFor="let task of tasks">
+		<span class="btn btn-success btn-xs" (click)="addToCompleted(task)">{{task.typos | uppercase | slice:0:1}}</span>
+	{{task.desc}}
+		<button (click)="editTask(task.id)">Edit</button>
+		<button (click)="deleteTask(task.id)">Delete</button>
+	</li>
+</ul>
+ -->
+
+<ul class="list-group">
+  <li class="list-group-item" *ngFor="let task of tasks">
+  {{task.desc}}
+	  <span class="badge" (click)="editTask(task.id)"><i class="glyphicon glyphicon-pencil"></i></span> 
+	  <span class="badge" (click)="deleteTask(task.id)"><i class="glyphicon glyphicon-remove"></i></span>
+	  <span class="badge type" (click)="addToCompleted(task)">{{task.typos | uppercase | slice:0:1}}</span>
+  </li>
+</ul>

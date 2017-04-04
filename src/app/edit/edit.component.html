@@ -1,0 +1,13 @@
+<div *ngIf="task">
+
+	  <h2 class="text-danger">{{task.desc}}</h2>
+
+	  <div class="form-group">
+	    <label class="text-warning">Edit task:</label>
+	    <input [(ngModel)]="task.desc" placeholder="name"  class="form-control"/>
+	  </div>
+
+	  <button (click)="save()" type="button" class="btn btn-success">Save</button>
+	  <button (click)="goBack()" type="button" class="btn btn-default">Back</button>  
+
+</div>
